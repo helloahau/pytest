@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+python_unit_testing_in_docker.egg-info/PKG-INFO
+python_unit_testing_in_docker.egg-info/SOURCES.txt
+python_unit_testing_in_docker.egg-info/dependency_links.txt
+python_unit_testing_in_docker.egg-info/top_level.txt
+scripts/__init__.py
+scripts/data_aggregator.py
+scripts/data_processor.py
+scripts/fitness_log.py
+scripts/json_processor.py
+scripts/map_population_update.py
