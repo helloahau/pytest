@@ -2,7 +2,7 @@ FROM python:3.7.6-buster
 LABEL MAINTAINER=python_student
 
 RUN mkdir /pytest_project/
-COPY ./test-requirements.txt /pytest_project/
+COPY ./requirements.txt /pytest_project/test-requirements.txt
 COPY ./setup.py ./setup.py
 
 RUN pip install --upgrade pip
