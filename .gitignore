@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
+.idea/
 */.idea/
 
 
@@ -145,3 +145,4 @@ pytestdebug.log
 htmlcov
 .idea
 venv/
+*.egg-info/
