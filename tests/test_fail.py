@@ -1,4 +1,4 @@
 
 
 def test_fail():
-    assert True == False
+    assert 1 == 1

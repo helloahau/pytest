@@ -16,6 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
@@ -34,3 +37,14 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: 30a0de8d472323ebe077eb764eebff54632531df
+        SONAR_TOKEN: 7ac94e955885dc6cd24412a723eb9ac1451991b4
+      with:
+        args: >
+          -Dsonar.python.coverage.reportPaths=coverage.xml
+          -Dsonar.test.exclusions=tests/**
+          -Dsonar.tests=tests/
+          -Dsonar.verbose=true
