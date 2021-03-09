@@ -46,6 +46,8 @@ jobs:
       env:
         GITHUB_TOKEN: 30a0de8d472323ebe077eb764eebff54632531df
         SONAR_TOKEN: 7ac94e955885dc6cd24412a723eb9ac1451991b4
+    - name: Analyze with SonarCloud
+      uses: sonarsource/sonarcloud-github-action@master
       with:
         projectBaseDir: .
         args: >
